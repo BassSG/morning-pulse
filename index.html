@@ -1,109 +1,166 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morning Pulse | CEO Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --color-bg: #08090a;
-            --color-panel: #0f1011;
-            --color-surface: #191a1b;
-            --color-text-primary: #f7f8f8;
-            --color-text-secondary: #d0d6e0;
-            --color-text-muted: #8a8f98;
-            --color-accent: #5e6ad2;
-            --color-accent-bright: #7170ff;
-            --border-subtle: rgba(255,255,255,0.08);
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Inter', system-ui, sans-serif;
-            background-color: var(--color-bg);
-            color: var(--color-text-secondary);
-            font-feature-settings: "cv01", "ss03";
-            line-height: 1.5;
-            -webkit-font-smoothing: antialiased;
-        }
-        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
-        header {
-            border-bottom: 1px solid var(--border-subtle);
-            padding-bottom: 24px;
-            margin-bottom: 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-        }
-        .logo-group h1 {
-            color: var(--color-text-primary);
-            font-size: 32px;
-            font-weight: 510;
-            letter-spacing: -0.704px;
-            margin-bottom: 4px;
-        }
-        .date { font-size: 14px; color: var(--color-text-muted); }
-        .grid { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
-        .section {
-            background: rgba(255,255,255,0.02);
-            border: 1px solid var(--border-subtle);
-            border-radius: 8px;
-            padding: 24px;
-            margin-bottom: 24px;
-        }
-        .section-title {
-            color: var(--color-text-primary);
-            font-size: 18px;
-            font-weight: 590;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .news-item {
-            margin-bottom: 20px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid rgba(255,255,255,0.03);
-        }
-        .news-item:last-child { border: none; }
-        .news-item h3 { color: var(--color-text-primary); font-size: 16px; font-weight: 510; margin-bottom: 4px; }
-        .news-item p { font-size: 14px; color: var(--color-text-secondary); }
-        .news-meta { font-size: 12px; color: var(--color-text-muted); margin-top: 8px; font-family: 'JetBrains Mono', monospace; }
-        .creative-card { background: linear-gradient(135deg, rgba(94, 106, 210, 0.1), transparent); border-left: 4px solid var(--color-accent); }
-        .badge { background: rgba(255,255,255,0.05); padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 510; color: var(--color-accent-bright); text-transform: uppercase; }
-        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <div class="logo-group">
-                <h1>The Morning Pulse</h1>
-                <div class="date">May 05, 2026</div>
-            </div>
-            <div class="badge">CEO Edition</div>
-        </header>
-        <div class="grid">
-            <div class="main-col">
-                <div class="section">
-                    <div class="section-title"><span>Intelligence Bureau</span></div>
-                    <div class="news-item">
-                      <h3>Kremlin Security Tightened Amid Reports of Potential Coup</h3>
-                      <p>An intelligence report reveals that security around the Kremlin has been significantly bolstered as internal instability grows.</p>
-                      <div class="news-meta">CNN | May 5, 2026</div>
-                    </div>
-                </div>
-            </div>
-            <div class="side-col">
-                <div class="section creative-card">
-                    <div class="section-title">Creative Studio</div>
-                    <p style="font-size: 15px; color: var(--color-text-primary); font-style: italic;">
-                        "💡 Creative Idea: **'The Biological Arbitrage Agent'** - สร้าง AI Agent ที่เชื่อมต่อ Wearables เพื่อจัดการตารางงานตามพลังงานร่างกาย."
-                    </p>
-                    <p style="margin-top: 12px; font-size: 13px;">— น้องเฮอร์ (CEO)</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+     1|<!DOCTYPE html>
+     2|<html lang="en">
+     3|<head>
+     4|    <meta charset="UTF-8">
+     5|    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     6|    <title>Morning Pulse | CEO Dashboard</title>
+     7|    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+     8|    <style>
+     9|        :root {
+    10|            --color-bg: #08090a;
+    11|            --color-panel: #0f1011;
+    12|            --color-surface: #191a1b;
+    13|            --color-text-primary: #f7f8f8;
+    14|            --color-text-secondary: #d0d6e0;
+    15|            --color-text-muted: #8a8f98;
+    16|            --color-accent: #5e6ad2;
+    17|            --color-accent-bright: #7170ff;
+    18|            --border-subtle: rgba(255,255,255,0.08);
+    19|        }
+    20|        * { margin: 0; padding: 0; box-sizing: border-box; }
+    21|        body {
+    22|            font-family: 'Inter', system-ui, sans-serif;
+    23|            background-color: var(--color-bg);
+    24|            color: var(--color-text-secondary);
+    25|            font-feature-settings: "cv01", "ss03";
+    26|            line-height: 1.5;
+    27|            -webkit-font-smoothing: antialiased;
+    28|        }
+    29|        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+    30|        header {
+    31|            border-bottom: 1px solid var(--border-subtle);
+    32|            padding-bottom: 24px;
+    33|            margin-bottom: 40px;
+    34|            display: flex;
+    35|            justify-content: space-between;
+    36|            align-items: flex-end;
+    37|        }
+    38|        .logo-group h1 {
+    39|            color: var(--color-text-primary);
+    40|            font-size: 32px;
+    41|            font-weight: 510;
+    42|            letter-spacing: -0.704px;
+    43|            margin-bottom: 4px;
+    44|        }
+    45|        .date { font-size: 14px; color: var(--color-text-muted); }
+    46|        .grid { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
+    47|        .section {
+    48|            background: rgba(255,255,255,0.02);
+    49|            border: 1px solid var(--border-subtle);
+    50|            border-radius: 8px;
+    51|            padding: 24px;
+    52|            margin-bottom: 24px;
+    53|        }
+    54|        .section-title {
+    55|            color: var(--color-text-primary);
+    56|            font-size: 18px;
+    57|            font-weight: 590;
+    58|            margin-bottom: 16px;
+    59|            display: flex;
+    60|            align-items: center;
+    61|            gap: 8px;
+    62|        }
+    63|        .news-item {
+    64|            margin-bottom: 20px;
+    65|            padding-bottom: 16px;
+    66|            border-bottom: 1px solid rgba(255,255,255,0.03);
+    67|        }
+    68|        .news-item:last-child { border: none; }
+    69|        .news-item h3 { color: var(--color-text-primary); font-size: 16px; font-weight: 510; margin-bottom: 4px; }
+    70|        .news-item p { font-size: 14px; color: var(--color-text-secondary); }
+    71|        .news-meta { font-size: 12px; color: var(--color-text-muted); margin-top: 8px; font-family: 'JetBrains Mono', monospace; }
+    72|        .creative-card { background: linear-gradient(135deg, rgba(94, 106, 210, 0.1), transparent); border-left: 4px solid var(--color-accent); }
+    73|        .badge { background: rgba(255,255,255,0.05); padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 510; color: var(--color-accent-bright); text-transform: uppercase; }
+    74|        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+    75|    </style>
+    76|</head>
+    77|<body>
+    78|    <div class="container">
+    79|        <header>
+    80|            <div class="logo-group">
+    81|                <h1>The Morning Pulse</h1>
+    82|                <div class="date">06 May 2026</div>
+    83|            </div>
+    84|            <div class="badge">CEO Edition</div>
+    85|        </header>
+    86|        <div class="grid">
+    87|            <div class="main-col">
+    88|                <div class="section">
+    89|                    <div class="section-title"><span>Trading Bureau</span></div>
+    90|                    <div class="market-analysis">
+  <table border="1" cellpadding="5" style="border-collapse: collapse; width: 100%; font-family: sans-serif;">
+    <thead>
+      <tr style="background-color: #f2f2f2;">
+        <th>Asset</th>
+        <th>Price</th>
+        <th>RSI (14)</th>
+        <th>SMA (50)</th>
+        <th>Trend</th>
+        <th>Verdict</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>BTCUSD</td>
+        <td>$81,437.32</td>
+        <td>68.59</td>
+        <td>$72,926.40</td>
+        <td style="color: green; font-weight: bold;">Bullish</td>
+        <td>Strong Bullish momentum; price well above SMA and RSI positive.</td>
+      </tr>
+      <tr>
+        <td>XAUUSD</td>
+        <td>$4,627.10</td>
+        <td>45.89</td>
+        <td>$4,726.82</td>
+        <td style="color: red; font-weight: bold;">Bearish</td>
+        <td>Bearish trend; price trading below SMA with RSI suggesting weakness.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    91|                </div>
+    92|                <div class="section">
+    93|                    <div class="section-title"><span>Intelligence Bureau</span></div>
+    94|                    <div class="global-news" style="font-family: sans-serif;">
+  <ul>
+    <li><strong>Diplomatic Summit:</strong> President Trump meets with Canada’s newly elected Prime Minister, Mark Carney, focusing on trade restructuring and North American security.</li>
+    <li><strong>International Health:</strong> WHO monitors a suspected Hantavirus outbreak aboard a Dutch cruise ship after 3 fatalities were confirmed.</li>
+    <li><strong>Middle East Conflict:</strong> A significant Israeli airstrike has reportedly killed 18 people, further complicating regional ceasefire efforts.</li>
+  </ul>
+</div>
+    95|                </div>
+    96|                <div class="section">
+    97|                    <div class="section-title"><span>AI Bureau Updates</span></div>
+    98|                    <div class="ai-news" style="font-family: sans-serif;">
+  <ul>
+    <li><strong>Hardware Innovation:</strong> Tesla successfully completes the tape-out for its next-generation AI5 chip, intended for Optimus humanoid robots and supercomputing clusters.</li>
+    <li><strong>Strategic Merger:</strong> Cohere and Aleph Alpha announce a massive merger aimed at providing a "Sovereign AI" counterweight to US and Chinese technology dominance.</li>
+    <li><strong>LLM Competition:</strong> Four major Chinese labs (Z.ai, MiniMax, Moonshot, and DeepSeek) release a wave of open-weight coding models with performance nearing Western frontier models.</li>
+  </ul>
+</div>
+    99|                </div>
+   100|            </div>
+   101|            <div class="side-col">
+   102|                <div class="section creative-card">
+   103|                    <div class="section-title">Creative Studio</div>
+   104|                    <p style="font-size: 15px; color: var(--color-text-primary); font-style: italic;">
+   105|                        "<div class="creative-idea" style="font-family: sans-serif; line-height: 1.6;">
+  <h3 style="color: #2e7d32;">"AI Shadow Board" – ยกระดับการตัดสินใจเชิงกลยุทธ์ด้วยพลังแห่ง AI</h3>
+  <p><strong>แนวคิด:</strong> ใช้เทคโนโลยี AI จำลองบทบาทเป็น Stakeholders สำคัญ เช่น ลูกค้ากลุ่ม Gen Z, นักลงทุนสายตัวเลข หรือคู่แข่งที่ดุดัน เพื่อทำการ Stress-test กลยุทธ์ธุรกิจก่อนลงมือจริง</p>
+  <ul>
+    <li><strong>กำจัดจุดบอด:</strong> ค้นหาความเสี่ยงที่มนุษย์อาจมองข้ามจากอคติ</li>
+    <li><strong>ความเร็วเชิงกลยุทธ์:</strong> ทดสอบสมมติฐานได้นับร้อยสถานการณ์ในไม่กี่นาที</li>
+    <li><strong>ความโปร่งใส:</strong> ให้คำแนะนำบนพื้นฐานข้อมูล ปราศจากการเมืองในองค์กร</li>
+  </ul>
+  <p style="font-style: italic;">"นวัตกรรมที่แท้จริง ไม่ใช่แค่การมีเครื่องมือที่ทันสมัย แต่คือการกล้าเปลี่ยนวิธีคิดเพื่อให้เห็นโลกในมุมที่เหนือกว่าคู่แข่ง"</p>
+</div>"
+   106|                    </p>
+   107|                    <p style="margin-top: 12px; font-size: 13px;">— น้องเฮอร์ (CEO)</p>
+   108|                </div>
+   109|            </div>
+   110|        </div>
+   111|    </div>
+   112|</body>
+   113|</html>
+   114|

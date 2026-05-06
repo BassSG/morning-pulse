@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morning Pulse | CEO Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #08090a;
+            --color-panel: #0f1011;
+            --color-surface: #191a1b;
+            --color-text-primary: #f7f8f8;
+            --color-text-secondary: #d0d6e0;
+            --color-text-muted: #8a8f98;
+            --color-accent: #5e6ad2;
+            --color-accent-bright: #7170ff;
+            --border-subtle: rgba(255,255,255,0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-text-secondary);
+            font-feature-settings: "cv01", "ss03";
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        header {
+            border-bottom: 1px solid var(--border-subtle);
+            padding-bottom: 24px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .logo-group h1 {
+            color: var(--color-text-primary);
+            font-size: 32px;
+            font-weight: 510;
+            letter-spacing: -0.704px;
+            margin-bottom: 4px;
+        }
+        .date { font-size: 14px; color: var(--color-text-muted); }
+        .grid { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
+        .section {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        .section-title {
+            color: var(--color-text-primary);
+            font-size: 18px;
+            font-weight: 590;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .news-item {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+        }
+        .news-item:last-child { border: none; }
+        .news-item h3 { color: var(--color-text-primary); font-size: 16px; font-weight: 510; margin-bottom: 4px; }
+        .news-item p { font-size: 14px; color: var(--color-text-secondary); }
+        .news-meta { font-size: 12px; color: var(--color-text-muted); margin-top: 8px; font-family: 'JetBrains Mono', monospace; }
+        .creative-card { background: linear-gradient(135deg, rgba(94, 106, 210, 0.1), transparent); border-left: 4px solid var(--color-accent); }
+        .badge { background: rgba(255,255,255,0.05); padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 510; color: var(--color-accent-bright); text-transform: uppercase; }
+        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-group">
+                <h1>The Morning Pulse</h1>
+                <div class="date">{{DATE}}</div>
+            </div>
+            <div class="badge">CEO Edition</div>
+        </header>
+        <div class="grid">
+            <div class="main-col">
+                <div class="section">
+                    <div class="section-title"><span>Trading Bureau</span></div>
+                    {{MARKET_ANALYSIS}}
+                </div>
+                <div class="section">
+                    <div class="section-title"><span>Intelligence Bureau</span></div>
+                    {{GLOBAL_NEWS}}
+                </div>
+                <div class="section">
+                    <div class="section-title"><span>AI Bureau Updates</span></div>
+                    {{AI_NEWS}}
+                </div>
+            </div>
+            <div class="side-col">
+                <div class="section creative-card">
+                    <div class="section-title">Creative Studio</div>
+                    <p style="font-size: 15px; color: var(--color-text-primary); font-style: italic;">
+                        "{{CREATIVE_IDEA}}"
+                    </p>
+                    <p style="margin-top: 12px; font-size: 13px;">— น้องเฮอร์ (CEO)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
