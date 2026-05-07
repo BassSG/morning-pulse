@@ -4,74 +4,209 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Morning Pulse | CEO Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --color-bg: #08090a;
-            --color-panel: #0f1011;
-            --color-surface: #191a1b;
-            --color-text-primary: #f7f8f8;
-            --color-text-secondary: #d0d6e0;
-            --color-text-muted: #8a8f98;
-            --color-accent: #5e6ad2;
-            --color-accent-bright: #7170ff;
-            --border-subtle: rgba(255,255,255,0.08);
+            --color-bg: #0a0a0c;
+            --color-panel: #141417;
+            --color-surface: #1c1c21;
+            --color-text-primary: #ffffff;
+            --color-text-secondary: #a1a1aa;
+            --color-text-muted: #52525b;
+            --color-accent: #6366f1;
+            --color-accent-bright: #818cf8;
+            --color-success: #22c55e;
+            --color-warning: #f59e0b;
+            --color-danger: #ef4444;
+            --border-subtle: rgba(255, 255, 255, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            font-family: 'Inter', system-ui, sans-serif;
+            font-family: 'Inter', 'Prompt', sans-serif;
             background-color: var(--color-bg);
             color: var(--color-text-secondary);
-            font-feature-settings: "cv01", "ss03";
-            line-height: 1.5;
+            line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
-        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
         header {
-            border-bottom: 1px solid var(--border-subtle);
-            padding-bottom: 24px;
-            margin-bottom: 40px;
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
+            align-items: center;
+            margin-bottom: 48px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-subtle);
         }
+
         .logo-group h1 {
             color: var(--color-text-primary);
-            font-size: 32px;
-            font-weight: 510;
-            letter-spacing: -0.704px;
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -0.025em;
             margin-bottom: 4px;
         }
-        .date { font-size: 14px; color: var(--color-text-muted); }
-        .grid { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
-        .section {
-            background: rgba(255,255,255,0.02);
-            border: 1px solid var(--border-subtle);
-            border-radius: 8px;
-            padding: 24px;
-            margin-bottom: 24px;
+
+        .date {
+            font-size: 14px;
+            color: var(--color-text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 500;
         }
+
+        .badge {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--color-accent-bright);
+            padding: 6px 12px;
+            border-radius: 9999px;
+            font-size: 12px;
+            font-weight: 600;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 32px;
+            align-items: start;
+        }
+
+        .section {
+            background-color: var(--color-panel);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 32px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
         .section-title {
             color: var(--color-text-primary);
-            font-size: 18px;
-            font-weight: 590;
-            margin-bottom: 16px;
+            font-size: 20px;
+            font-weight: 600;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 12px;
         }
-        .news-item {
-            margin-bottom: 20px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid rgba(255,255,255,0.03);
+
+        .update-time {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--color-text-muted);
+            background: rgba(255, 255, 255, 0.03);
+            padding: 4px 8px;
+            border-radius: 4px;
         }
-        .news-item:last-child { border: none; }
-        .news-item h3 { color: var(--color-text-primary); font-size: 16px; font-weight: 510; margin-bottom: 4px; }
-        .news-item p { font-size: 14px; color: var(--color-text-secondary); }
-        .news-meta { font-size: 12px; color: var(--color-text-muted); margin-top: 8px; font-family: 'JetBrains Mono', monospace; }
-        .creative-card { background: linear-gradient(135deg, rgba(94, 106, 210, 0.1), transparent); border-left: 4px solid var(--color-accent); }
-        .badge { background: rgba(255,255,255,0.05); padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 510; color: var(--color-accent-bright); text-transform: uppercase; }
-        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+
+        /* Trading Table Styles */
+        .trading-table-container {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-subtle);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: rgba(255, 255, 255, 0.03);
+            color: var(--color-text-muted);
+            font-weight: 600;
+            text-align: left;
+            padding: 12px 16px;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 0.05em;
+        }
+
+        td {
+            padding: 16px;
+            border-bottom: 1px solid var(--border-subtle);
+            color: var(--color-text-secondary);
+        }
+
+        tr:last-child td { border-bottom: none; }
+
+        .asset-name { color: var(--color-text-primary); font-weight: 600; }
+        .price-val { font-family: 'JetBrains Mono', monospace; }
+        .trend-up { color: var(--color-success); }
+        .trend-down { color: var(--color-danger); }
+        .trend-neutral { color: var(--color-warning); }
+
+        .analysis-box {
+            margin-top: 16px;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 8px;
+            font-style: italic;
+            font-size: 13px;
+            border-left: 3px solid var(--color-accent);
+        }
+
+        /* List Styles */
+        .content-list {
+            list-style: none;
+        }
+
+        .content-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        .content-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+            font-weight: bold;
+        }
+
+        .content-list b { color: var(--color-text-primary); }
+
+        /* Sidebar Cards */
+        .breaking-news-card {
+            border-left: 4px solid var(--color-danger);
+            background: linear-gradient(to right, rgba(239, 68, 68, 0.05), transparent);
+        }
+
+        .creative-card {
+            border-left: 4px solid var(--color-accent);
+            background: linear-gradient(to right, rgba(99, 102, 241, 0.05), transparent);
+        }
+
+        .nong-her-quote {
+            font-size: 15px;
+            color: var(--color-text-primary);
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+
+        @media (max-width: 1024px) {
+            .grid { grid-template-columns: 1fr; }
+            .container { padding: 24px 16px; }
+        }
     </style>
 </head>
 <body>
@@ -83,28 +218,57 @@
             </div>
             <div class="badge">CEO Edition</div>
         </header>
+
         <div class="grid">
             <div class="main-col">
+                <!-- Trading Bureau -->
                 <div class="section">
-                    <div class="section-title"><span>Trading Bureau</span></div>
+                    <div class="section-header">
+                        <div class="section-title">📊 Trading Bureau</div>
+                        <div class="update-time">Updated: {{UPDATE_TIME_TRADING}}</div>
+                    </div>
                     {{MARKET_ANALYSIS}}
                 </div>
+
+                <!-- Intelligence Bureau -->
                 <div class="section">
-                    <div class="section-title"><span>Intelligence Bureau</span></div>
+                    <div class="section-header">
+                        <div class="section-title">🌐 Intelligence Bureau</div>
+                        <div class="update-time">Updated: {{UPDATE_TIME_INTEL}}</div>
+                    </div>
                     {{GLOBAL_NEWS}}
                 </div>
+
+                <!-- AI Bureau Updates -->
                 <div class="section">
-                    <div class="section-title"><span>AI Bureau Updates</span></div>
+                    <div class="section-header">
+                        <div class="section-title">🤖 AI Bureau Updates</div>
+                        <div class="update-time">Updated: {{UPDATE_TIME_AI}}</div>
+                    </div>
                     {{AI_NEWS}}
                 </div>
             </div>
+
             <div class="side-col">
+                <!-- Breaking News -->
+                <div class="section breaking-news-card">
+                    <div class="section-header">
+                        <div class="section-title" style="color: var(--color-danger)">🔥 Breaking News</div>
+                        <div class="update-time">Live</div>
+                    </div>
+                    {{BREAKING_NEWS}}
+                    <div style="margin-top: 12px; font-size: 12px; color: var(--color-text-muted);">Reported by น้องเฮ้อ (Nong Her)</div>
+                </div>
+
+                <!-- Creative Studio -->
                 <div class="section creative-card">
-                    <div class="section-title">Creative Studio</div>
-                    <p style="font-size: 15px; color: var(--color-text-primary); font-style: italic;">
+                    <div class="section-header">
+                        <div class="section-title">✨ Creative Studio</div>
+                    </div>
+                    <div class="nong-her-quote">
                         "{{CREATIVE_IDEA}}"
-                    </p>
-                    <p style="margin-top: 12px; font-size: 13px;">— น้องเฮอร์ (CEO)</p>
+                    </div>
+                    <p style="font-size: 13px; color: var(--color-text-muted);">— น้องเฮอร์ (CEO)</p>
                 </div>
             </div>
         </div>
