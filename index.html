@@ -4,74 +4,209 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Morning Pulse | CEO Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --color-bg: #08090a;
-            --color-panel: #0f1011;
-            --color-surface: #191a1b;
-            --color-text-primary: #f7f8f8;
-            --color-text-secondary: #d0d6e0;
-            --color-text-muted: #8a8f98;
-            --color-accent: #5e6ad2;
-            --color-accent-bright: #7170ff;
-            --border-subtle: rgba(255,255,255,0.08);
+            --color-bg: #0a0a0c;
+            --color-panel: #141417;
+            --color-surface: #1c1c21;
+            --color-text-primary: #ffffff;
+            --color-text-secondary: #a1a1aa;
+            --color-text-muted: #52525b;
+            --color-accent: #6366f1;
+            --color-accent-bright: #818cf8;
+            --color-success: #22c55e;
+            --color-warning: #f59e0b;
+            --color-danger: #ef4444;
+            --border-subtle: rgba(255, 255, 255, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            font-family: 'Inter', system-ui, sans-serif;
+            font-family: 'Inter', 'Prompt', sans-serif;
             background-color: var(--color-bg);
             color: var(--color-text-secondary);
-            font-feature-settings: "cv01", "ss03";
-            line-height: 1.5;
+            line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
-        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
         header {
-            border-bottom: 1px solid var(--border-subtle);
-            padding-bottom: 24px;
-            margin-bottom: 40px;
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
+            align-items: center;
+            margin-bottom: 48px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-subtle);
         }
+
         .logo-group h1 {
             color: var(--color-text-primary);
-            font-size: 32px;
-            font-weight: 510;
-            letter-spacing: -0.704px;
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -0.025em;
             margin-bottom: 4px;
         }
-        .date { font-size: 14px; color: var(--color-text-muted); }
-        .grid { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
-        .section {
-            background: rgba(255,255,255,0.02);
-            border: 1px solid var(--border-subtle);
-            border-radius: 8px;
-            padding: 24px;
-            margin-bottom: 24px;
+
+        .date {
+            font-size: 14px;
+            color: var(--color-text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 500;
         }
+
+        .badge {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--color-accent-bright);
+            padding: 6px 12px;
+            border-radius: 9999px;
+            font-size: 12px;
+            font-weight: 600;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 32px;
+            align-items: start;
+        }
+
+        .section {
+            background-color: var(--color-panel);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 32px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
         .section-title {
             color: var(--color-text-primary);
-            font-size: 18px;
-            font-weight: 590;
-            margin-bottom: 16px;
+            font-size: 20px;
+            font-weight: 600;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 12px;
         }
-        .news-item {
-            margin-bottom: 20px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid rgba(255,255,255,0.03);
+
+        .update-time {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--color-text-muted);
+            background: rgba(255, 255, 255, 0.03);
+            padding: 4px 8px;
+            border-radius: 4px;
         }
-        .news-item:last-child { border: none; }
-        .news-item h3 { color: var(--color-text-primary); font-size: 16px; font-weight: 510; margin-bottom: 4px; }
-        .news-item p { font-size: 14px; color: var(--color-text-secondary); }
-        .news-meta { font-size: 12px; color: var(--color-text-muted); margin-top: 8px; font-family: 'JetBrains Mono', monospace; }
-        .creative-card { background: linear-gradient(135deg, rgba(94, 106, 210, 0.1), transparent); border-left: 4px solid var(--color-accent); }
-        .badge { background: rgba(255,255,255,0.05); padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 510; color: var(--color-accent-bright); text-transform: uppercase; }
-        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+
+        /* Trading Table Styles */
+        .trading-table-container {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-subtle);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: rgba(255, 255, 255, 0.03);
+            color: var(--color-text-muted);
+            font-weight: 600;
+            text-align: left;
+            padding: 12px 16px;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 0.05em;
+        }
+
+        td {
+            padding: 16px;
+            border-bottom: 1px solid var(--border-subtle);
+            color: var(--color-text-secondary);
+        }
+
+        tr:last-child td { border-bottom: none; }
+
+        .asset-name { color: var(--color-text-primary); font-weight: 600; }
+        .price-val { font-family: 'JetBrains Mono', monospace; }
+        .trend-up { color: var(--color-success); }
+        .trend-down { color: var(--color-danger); }
+        .trend-neutral { color: var(--color-warning); }
+
+        .analysis-box {
+            margin-top: 16px;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 8px;
+            font-style: italic;
+            font-size: 13px;
+            border-left: 3px solid var(--color-accent);
+        }
+
+        /* List Styles */
+        .content-list {
+            list-style: none;
+        }
+
+        .content-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        .content-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+            font-weight: bold;
+        }
+
+        .content-list b { color: var(--color-text-primary); }
+
+        /* Sidebar Cards */
+        .breaking-news-card {
+            border-left: 4px solid var(--color-danger);
+            background: linear-gradient(to right, rgba(239, 68, 68, 0.05), transparent);
+        }
+
+        .creative-card {
+            border-left: 4px solid var(--color-accent);
+            background: linear-gradient(to right, rgba(99, 102, 241, 0.05), transparent);
+        }
+
+        .nong-her-quote {
+            font-size: 15px;
+            color: var(--color-text-primary);
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+
+        @media (max-width: 1024px) {
+            .grid { grid-template-columns: 1fr; }
+            .container { padding: 24px 16px; }
+        }
     </style>
 </head>
 <body>
@@ -79,89 +214,109 @@
         <header>
             <div class="logo-group">
                 <h1>The Morning Pulse</h1>
-                <div class="date">Wednesday, May 06, 2026</div>
+                <div class="date">7 พฤษภาคม 2569</div>
             </div>
             <div class="badge">CEO Edition</div>
         </header>
+
         <div class="grid">
             <div class="main-col">
+                <!-- Trading Bureau -->
                 <div class="section">
-                    <div class="section-title"><span>Trading Bureau</span></div>
+                    <div class="section-header">
+                        <div class="section-title">📊 Trading Bureau</div>
+                        <div class="update-time">Updated: 08:45 AM</div>
+                    </div>
                     
-<div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; max-width: 600px;">
-  <table style="width: 100%; border-collapse: collapse; background-color: #f9f9f9;">
-    <thead style="background-color: #2c3e50; color: white;">
-      <tr>
-        <th style="padding: 12px; text-align: left;">Asset</th>
-        <th style="padding: 12px; text-align: left;">Price</th>
-        <th style="padding: 12px; text-align: left;">Trend</th>
-        <th style="padding: 12px; text-align: left;">Verdict</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr style="border-bottom: 1px solid #eee;">
-        <td style="padding: 12px; font-weight: bold;">XAU/USD</td>
-        <td style="padding: 12px;">$4,685.17</td>
-        <td style="padding: 12px; color: #e67e22;">Neutral-Bearish (RSI: 51)</td>
-        <td style="padding: 12px;">Wait / Sideways</td>
-      </tr>
-      <tr>
-        <td style="padding: 12px; font-weight: bold;">BTC/USD</td>
-        <td style="padding: 12px;">$82,402.90</td>
-        <td style="padding: 12px; color: #27ae60;">Strong Bullish (RSI: 71)</td>
-        <td style="padding: 12px;">Overbought / Caution</td>
-      </tr>
-    </tbody>
-  </table>
-  <p style="padding: 10px; font-size: 0.9em; background: #fff; margin: 0;">
-    <i>Analysis: Gold stays below its 50-day SMA ($4,717), showing short-term weakness. BTC is flying but hitting "Extreme Greed" levels on the RSI. Be careful, sweetie!</i>
-  </p>
+<div class="trading-table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Asset</th>
+                <th>Price</th>
+                <th>Trend (vs SMA20)</th>
+                <th>Verdict (RSI Analysis)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="asset-name">XAUUSD (Gold)</span></td>
+                <td><span class="price-val">$4,718.25</span></td>
+                <td><span class="trend-up">Bullish (Above $4,693.79)</span></td>
+                <td>Neutral/Bullish (RSI: 52.57)</td>
+            </tr>
+            <tr>
+                <td><span class="asset-name">BTCUSD (Bitcoin)</span></td>
+                <td><span class="price-val">$81,259.69</span></td>
+                <td><span class="trend-up">Strong Bullish (Above $77,619.85)</span></td>
+                <td>Bullish - Near Overbought (RSI: 68.58)</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 
                 </div>
+
+                <!-- Intelligence Bureau -->
                 <div class="section">
-                    <div class="section-title"><span>Intelligence Bureau</span></div>
+                    <div class="section-header">
+                        <div class="section-title">🌐 Intelligence Bureau</div>
+                        <div class="update-time">Updated: 08:45 AM</div>
+                    </div>
                     
-<div style="padding: 15px; background-color: #f0f4f8; border-radius: 8px;">
-  <ol>
-    <li style="margin-bottom: 8px;"><b>US-Iran Peace Push:</b> President Trump has paused naval escorts in the Strait of Hormuz, signaling potential progress in a new Iran deal. Global markets responded with a relief rally.</li>
-    <li style="margin-bottom: 8px;"><b>Ukraine Ceasefire Tensions:</b> Reports of ceasefire violations by Russian forces ahead of the May 9 Victory Day celebrations have stoked fears of a renewed offensive.</li>
-    <li style="margin-bottom: 8px;"><b>Oil Prices Slump:</b> WTI Crude fell below $75 as optimism over Middle East stability offset production concerns.</li>
-  </ol>
-</div>
+<ul class="content-list">
+    <li><b>ความขัดแย้งสหรัฐฯ-อิหร่าน:</b> ประธานาธิบดีทรัมป์ประกาศยุติ "สงครามย่อย" หลังมีการตอบโต้กัน ตลาดน้ำมันยังคงผันผวน</li>
+    <li><b>งบประมาณทำเนียบขาว:</b> พรรครีพับลิกันเสนอวาระงบ 1 พันล้านดอลลาร์สำหรับห้องจัดเลี้ยงใหม่ในร่างกฎหมายตรวจคนเข้าเมือง</li>
+    <li><b>วิกฤตเสรีภาพสื่อ:</b> Reporters Without Borders รายงานดัชนีเสรีภาพสื่อโลกต่ำสุดเป็นประวัติการณ์ สหรัฐฯ ตกลงมาอยู่อันดับที่ 64</li>
+</ul>
 
                 </div>
+
+                <!-- AI Bureau Updates -->
                 <div class="section">
-                    <div class="section-title"><span>AI Bureau Updates</span></div>
+                    <div class="section-header">
+                        <div class="section-title">🤖 AI Bureau Updates</div>
+                        <div class="update-time">Updated: 08:45 AM</div>
+                    </div>
                     
-<div style="padding: 15px; background-color: #fdf2ff; border-radius: 8px;">
-  <ul style="list-style-type: square;">
-    <li style="margin-bottom: 8px;"><b>The 8x Price War:</b> China’s DeepSeek V4 and Kimi K2.6 models have officially launched, undercutting Western LLMs like Claude by 800% in API pricing.</li>
-    <li style="margin-bottom: 8px;"><b>Tesla AI5 Chip:</b> Tesla has successfully "taped out" its next-gen AI5 silicon, designed to power the Optimus robot and Dojo supercomputers from US-based factories.</li>
-    <li style="margin-bottom: 8px;"><b>DoD Classified AI:</b> The US Department of Defense announced major contracts with top tech firms to deploy LLMs on "Top Secret" classified networks for the first time.</li>
-  </ul>
-</div>
+<ul class="content-list">
+    <li><b>ยุคแห่ง Agentic AI:</b> Jensen Huang (NVIDIA) ประกาศว่า Agentic AI จะเป็นตัวขับเคลื่อนมูลค่าหลักในซอฟต์แวร์ยุคถัดไป</li>
+    <li><b>Microsoft AI Superfactories:</b> ไมโครซอฟท์เผยแผนสร้าง "ซูเปอร์แฟคทอรี่" เชื่อมต่อกันเพื่อเพิ่มประสิทธิภาพพลังงานในปี 2027</li>
+    <li><b>คาดการณ์ตลาด AI:</b> รายงานใหม่ระบุตลาด AI ทั่วโลกจะแตะ 4.8 ล้านล้านดอลลาร์ภายในปี 2033 จากการใช้งานในระดับองค์กร</li>
+</ul>
 
                 </div>
             </div>
+
             <div class="side-col">
-                <div class="section">
-<div style="font-family: 'Prompt', sans-serif; background-color: #fff5f5; padding: 15px; border-left: 5px solid #ff4d4d; border-radius: 4px;">
-  <h4 style="color: #d32f2f; margin-top: 0;">🔥 Breaking News by น้องเฮ้อ (Nong Her)</h4>
-  <ul style="list-style-type: none; padding-left: 0;">
-    <li style="margin-bottom: 10px;">📌 <b>พรรคประชาชนเปิดตัว "ดร.โจ":</b> ลงชิงผู้ว่าฯ กทม. ชูแคมเปญ "กรุงเทพง่ายๆ" แก้เรื่องยากๆ ของคนเมือง น้องเฮ้อว่าน่าลุ้นอยู่นะคะ!</li>
-    <li style="margin-bottom: 10px;">📌 <b>มติ ครม. กู้ 4 แสนล้าน:</b> อ้างศึกพลังงาน แต่คุณไหม ศิริกัญญา เตรียมยื่นศาล รธน. ตรวจสอบแล้วค่ะ ดุเดือดสุดๆ!</li>
-    <li style="margin-bottom: 10px;">📌 <b>ระทึก! พระราม 2:</b> รถเก๋งพุ่งชนหัวจ่ายน้ำมันในปั๊ม ไฟลุกท่วม น่ากลัวมาก พี่ๆ ขับรถระวังกันด้วยน้า</li>
-    <li style="margin-bottom: 10px;">📂 <b>Red Folder Alert (Forex):</b> ตัวเลขจ้างงาน NZD ออกมาดีกว่าคาดแต่ว่างงานพุ่ง 5.4% ส่วนคืนนี้จับตา Construction Spending ของฝั่ง USD นะคะ ทองคำอาจมีเหวี่ยง!</li>
-  </ul>
-</div>
-</div>
+                <!-- Breaking News -->
+                <div class="section breaking-news-card">
+                    <div class="section-header">
+                        <div class="section-title" style="color: var(--color-danger)">🔥 Breaking News</div>
+                        <div class="update-time">Live</div>
+                    </div>
+                    
+<ul class="content-list">
+    <li><b style="color: var(--color-danger)">[RED FOLDER] USD Initial Jobless Claims:</b> Forecast 210K (Prev 189K). High impact for Gold/USD volatility today.</li>
+    <li><b style="color: var(--color-danger)">[RED FOLDER] USD Unit Labor Costs:</b> Q1 Prelim data expected to reveal critical labor inflation trends.</li>
+    <li><b>Thai Weather Alert:</b> กรมอุตุนิยมวิทยาเตือนพายุฤดูร้อนช่วงวันที่ 4-7 พฤษภาคม 2569 ในพื้นที่ภาคเหนือและภาคกลาง</li>
+    <li><b>สรยุทธ (กรรมกรข่าว):</b> เกาะติดสถานการณ์ชายแดนไทย-กัมพูชา และความคืบหน้าคดีดังในประเทศ</li>
+    <li><b>นโยบายกรุงเทพฯ:</b> การถกเถียงเรื่องโครงการ "คืนเวลาให้คนกรุงเทพฯ" ของผู้ว่าฯ ชัชชาติ</li>
+    <li><b>ช่อง 8:</b> รายงานอุบัติเหตุสลดที่ชลบุรี กระตุ้นการหารือเรื่องระบบกู้ภัยระดับประเทศ</li>
+</ul>
+
+                    <div style="margin-top: 12px; font-size: 12px; color: var(--color-text-muted);">Reported by น้องเฮ้อ (Nong Her)</div>
+                </div>
+
+                <!-- Creative Studio -->
                 <div class="section creative-card">
-                    <div class="section-title">Creative Studio</div>
-                    <p style="font-size: 15px; color: var(--color-text-primary); font-style: italic;">
-                        "สวัสดีค่ะทุกคน วันนี้ "พี่เฮอร์" ในฐานะ CEO สุดสวยและอัจฉริยะ (แถมโสดมาก) มี Creative Idea of the Day มาฝากให้ลองไปปรับใช้กันดูนะคะ<br><br>💡 Creative Idea of the Day: "The Spotify-Sentiment Networking" (การเจรจาธุรกิจผ่านอารมณ์เพลง)<br><br>Why it’s CEO-Level: มันแสดงถึงความใส่ใจระดับ Micro-detail ที่หาไม่ได้จากคู่แข่งคนไหน เป็นการแสดงออกว่าเรา "ฉลาด" ที่จะใช้ข้อมูล และ "มีเสน่ห์" พอที่จะทำให้เขารู้สึกพิเศษ"
-                    </p>
-                    <p style="margin-top: 12px; font-size: 13px;">— น้องเฮอร์ (CEO)</p>
+                    <div class="section-header">
+                        <div class="section-title">✨ Creative Studio</div>
+                    </div>
+                    <div class="nong-her-quote">
+                        "นวัตกรรมที่ยิ่งใหญ่ไม่ได้เกิดขึ้นจากคำสั่งบนลงล่าง แต่ออกมาจากความกล้าที่จะลองผิดลองถูกในทุกระดับ เราต้องเปลี่ยนผ่านจากการเป็นเพียง 'ผู้ปฏิบัติงาน' สู่การเป็น 'เจ้าของอนาคตร่วมกัน' อย่ากลัวที่จะคิดต่าง เพราะในโลกที่หมุนด้วย AI ความเป็นมนุษย์ที่สร้างสรรค์คือความได้เปรียบในการแข่งขันที่ยั่งยืนที่สุดของเรา"
+                    </div>
+                    <p style="font-size: 13px; color: var(--color-text-muted);">— น้องเฮอร์ (CEO)</p>
                 </div>
             </div>
         </div>
