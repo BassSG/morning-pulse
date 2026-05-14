@@ -214,7 +214,7 @@
         <header>
             <div class="logo-group">
                 <h1>The Morning Pulse</h1>
-                <div class="date">Wednesday, 13 May 2026</div>
+                <div class="date">Thursday, 14 May 2026 08:49 Bangkok</div>
             </div>
             <div class="badge">CEO Edition</div>
         </header>
@@ -225,27 +225,27 @@
                 <div class="section">
                     <div class="section-header">
                         <div class="section-title">📊 Trading Bureau</div>
-                        <div class="update-time">Updated: 19:00</div>
+                        <div class="update-time">Updated: {{UPDATE_TIME_TRADING}}</div>
                     </div>
-                    <table class="market-analysis"><thead><tr><th>Asset</th><th>Price</th><th>Trend</th><th>Verdict</th></tr></thead><tbody><tr><td><b>XAUUSD / Gold</b></td><td>USD 4,699.66</td><td>Sideways / Neutral<br><small>RSI14 50.97 | SMA50 4,669.60 | Change -0.34%</small></td><td>ทองยังยืนเหนือ SMA50 เล็กน้อย แต่ RSI กลาง ๆ แปลว่าโมเมนตัมยังไม่ชัด รอ red-folder USD หรือ breakout เหนือกรอบก่อนเพิ่มความเสี่ยง</td></tr><tr><td><b>BTCUSD</b></td><td>USD 80,565.94</td><td>Bullish but cooling<br><small>RSI14 59.21 | SMA50 74,585.93 | Change +0.11%</small></td><td>BTC ยังอยู่เหนือ SMA50 ชัด โครงสร้างยังบวก แต่ RSI ไม่ได้ร้อนจัด เหมาะกับกลยุทธ์รอ pullback มากกว่าไล่ราคา</td></tr></tbody></table><p class="data-note"><small>Source: FMP API via repo market_data.py, รอบ cron 13 May 2026 19:00 DST</small></p>
+                    <div class="market-analysis"><h2>Market Analysis</h2><table class="market-table"><thead><tr><th>Asset</th><th>Price</th><th>Trend</th><th>Verdict</th></tr></thead><tbody><tr><td>XAUUSD</td><td>USD 4,694.50</td><td>Bullish เหนือ SMA50</td><td>Bias ซื้อเมื่อย่อ ตราบใดที่ยังยืนเหนือ SMA50; RSI 50.3<br><small>RSI(14): 50.3 | SMA(50): 4,669.45</small></td></tr><tr><td>BTCUSD</td><td>USD 79,519.64</td><td>Bullish เหนือ SMA50</td><td>Bias ซื้อเมื่อย่อ ตราบใดที่ยังยืนเหนือ SMA50; RSI 54.8<br><small>RSI(14): 54.8 | SMA(50): 74,565.92</small></td></tr></tbody></table><p class="market-note">Source: FMP API via repo market workflow where available. ใช้เพื่อวางแผน ไม่ใช่คำแนะนำการลงทุน</p></div>
                 </div>
 
                 <!-- Intelligence Bureau -->
                 <div class="section">
                     <div class="section-header">
                         <div class="section-title">🌐 Intelligence Bureau</div>
-                        <div class="update-time">Updated: 19:00</div>
+                        <div class="update-time">Updated: {{UPDATE_TIME_INTEL}}</div>
                     </div>
-                    <div class="news-section global-news"><h3>Global News Pulse</h3><ul><li><b>BBC:</b> ผู้โดยสารเรือครูซในฝรั่งเศสถูกกักหลังเกิด gastroenteritis outbreak — เตือนเรื่อง operational risk ในท่องเที่ยวและสาธารณสุข</li><li><b>NYT:</b> Xi Jinping เตรียมฉากเจรจากับ Trump ในปักกิ่ง — ตลาดจับตาความสัมพันธ์สหรัฐ-จีนและผลต่อ trade / AI / risk assets</li><li><b>NYT:</b> Gulf countries arrest Shiite “traitors” amid war with Iran — ความตึงเครียดตะวันออกกลางยังเป็นตัวขับ safe-haven สำคัญต่อทอง</li></ul></div>
+                    <div class="news-section global-news"><h2>Global News Pulse</h2><article class="news-card"><h3>Trade, Iran and Taiwan on the agenda as Trump arrives in China for high-stakes talks with Xi</h3><p>The US president says his first request to Xi would be to  &quot;open up&quot; China, while Beijing is expected to press Trump on the status of Taiwan.</p><a href="https://www.bbc.com/news/articles/c1w28qw1e0xo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">อ่านต่อ</a></article><article class="news-card"><h3>Court overturns Alex Murdaugh&#x27;s murder convictions and orders new trial</h3><p>The court has ordered a new trial over the June 2021 killings of Paul and Maggie Murdaugh.</p><a href="https://www.bbc.com/news/articles/cedpvnq7wn1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">อ่านต่อ</a></article><article class="news-card"><h3>The Lecturer and Philosopher King: Xi Jinping Behind Closed Doors</h3><p>Encounters with other world leaders reveal a side of China’s leader that the public rarely sees, and offer clues to how he will approach President Trump in Beijing.</p><a href="https://www.nytimes.com/2026/05/13/world/asia/xi-jinping-china-leader-trump-summit.html" target="_blank" rel="noopener">อ่านต่อ</a></article></div>
                 </div>
 
                 <!-- AI Bureau Updates -->
                 <div class="section">
                     <div class="section-header">
                         <div class="section-title">🤖 AI Bureau Updates</div>
-                        <div class="update-time">Updated: 19:00</div>
+                        <div class="update-time">Updated: {{UPDATE_TIME_AI}}</div>
                     </div>
-                    <div class="news-section ai-news"><h3>AI News Pulse</h3><ul><li><b>The Verge:</b> Data centers are coming for rural America — AI compute กำลังขยายจากเมืองใหญ่สู่พื้นที่ชนบท ประเด็นพลังงานและโครงสร้างพื้นฐานจะร้อนขึ้น</li><li><b>TechCrunch:</b> Medicare’s new payment model is built for AI — healthcare agents อาจเริ่มมีช่องทางรายได้จริงผ่านโมเดลจ่ายเงินใหม่</li><li><b>TechCrunch:</b> Anthropic warns investors against secondary platforms offering access to its shares — demand หุ้น AI private market ยังแรง แต่ governance/secondary risk ต้องระวัง</li></ul></div>
+                    <div class="news-section ai-news"><h2>AI News Pulse</h2><article class="news-card"><h3>Microsoft&amp;#8217;s Edge Copilot update uses AI to pull information from across your tabs</h3><p>Microsoft Edge is adding a new feature that will allow its Copilot AI chatbot to gather information from all of your open tabs. When you start a conversation with Copilot, you can ask the chatbot questions about what&#x27;s in your tabs, compare the products you&#x27;re</p><a href="https://www.theverge.com/tech/930188/microsoft-edge-copilot-ai-tabs" target="_blank" rel="noopener">อ่านต่อ</a></article><article class="news-card"><h3>Mark Zuckerberg announces &amp;#8216;completely private&amp;#8217; encrypted Meta AI chat</h3><p>Meta CEO Mark Zuckerberg says its new Incognito Chat is &quot;the first major AI product where there is no log of your conversations stored on servers.&quot; Messages in Incognito Chat aren&#x27;t saved or stored in users&#x27; chat history, similar to incognito modes on other AI</p><a href="https://www.theverge.com/tech/929791/meta-ai-incognito-chats" target="_blank" rel="noopener">อ่านต่อ</a></article><article class="news-card"><h3>Microsoft doesn’t want any of this</h3><p>Maybe I&#x27;m just punch-drunk in my third week attending Musk v. Altman, but I have become very, very fond of Microsoft during the course of this trial. They don&#x27;t want to be here any more than I do. Their opening statement was honestly one of the most Microsoft </p><a href="https://www.theverge.com/ai-artificial-intelligence/929692/microsoft-musk-altman-openai-trial" target="_blank" rel="noopener">อ่านต่อ</a></article></div>
                 </div>
             </div>
 
@@ -256,7 +256,7 @@
                         <div class="section-title" style="color: var(--color-danger)">🔥 Breaking News</div>
                         <div class="update-time">Live</div>
                     </div>
-                    <div class="breaking-news"><h3>Thai Breaking News และ Red Folder</h3><h4>ข่าวไทยจาก Scouting Method</h4><ul><li><b>สรยุทธ:</b> เปิดนาทีหนุ่มวัย 24 ถูกยิงเจ็บคาบ้าน คาดปมขัดแย้งเพื่อนบ้านรำคาญเสียงรีวิวขายของออนไลน์</li><li><b>สรยุทธ:</b> กำนันปืนดุ ชักปืนยิงจ่อหัวเสี่ยเจ้าของโรงเชือดหมู เลือดอาบคารถหรูป้ายแดง</li><li><b>เรื่องเล่าเช้านี้:</b> แม่ค้าเตือนภัย ลูกค้าสุดแสบหลอกเคลมทุเรียน และข่าวผู้บริโภคที่กระทบ SME รายวัน</li><li><b>ช่อง 8:</b> ประเด็นทุนเทา ฟรีวีซ่า และอำนาจเงิน ถูกนำเสนอเป็นวาระใหญ่ด้านอาชญากรรม/รัฐไทย</li></ul><h4>Red Folder / High Impact for Gold and USD</h4><ul><li><b>Confirmed red-folder status:</b> ForexFactory และ MetalsMine ถูก Cloudflare 403 ใน runtime นี้ จึงไม่ยืนยัน red-folder จากสองแหล่งโดยตรง</li><li><b>USD calendar watch:</b> Investing calendar พบ FOMC Member Kashkari Speaks วันนี้ — โทน hawkish จะหนุน USD/yields และกด XAUUSD; โทน dovish จะช่วยทองฟื้น</li><li><b>Gold driver:</b> ตะวันออกกลาง/อิหร่านยังเป็น geopolitical high-impact theme ถ้าข่าวรุนแรงขึ้น ทองมีโอกาสรับแรงซื้อ safe haven</li></ul></div>
+                    <div class="breaking-news"><h2>Breaking News & Red Folder</h2><section class="thai-breaking"><h3>Thai Breaking News Watchlist</h3><article class="news-card"><h4>สรยุทธ — เปิดนาทีหนุ่มวัย 24 ถูกยิงเจ็บคาบ้าน คาดปมขัดแย้งเพื่อนบ้านรำคาญเสียงรีวิวขายของออนไลน์</h4><a href="https://www.youtube.com/watch?v=w-HJQ6eYbNM" target="_blank" rel="noopener">เปิดแหล่งข่าว</a></article><article class="news-card"><h4>เรื่องเล่าเช้านี้ — เรื่องเล่าหน้าหนึ่ง 14 พ.ค.69 นายกฯ ลุยเกาะพะงัน-คลิปเสียงทราย สก๊อต-โวยติดโซลาร์เซลล์ค่าไฟไม่ลด</h4><a href="https://www.youtube.com/watch?v=eqWfqqOekos" target="_blank" rel="noopener">เปิดแหล่งข่าว</a></article><article class="news-card"><h4>ช่อง 8 — เสียเหลี่ยม! &quot;เฉิน C4&quot; พยัคฆ์ร้าย 2 หน้าต้มตำรวจจนเปื่อย!?</h4><a href="คนดังนั่งเคลียร์ | 13 พ.ค. 69|https://www.youtube.com/watch?v=OfzxASe-hkA" target="_blank" rel="noopener">เปิดแหล่งข่าว</a></article></section><section class="red-folder"><h3>Red Folder: Gold/USD High Impact</h3><ul><li><strong>US Producer Price Index (PPI) / Core PPI</strong> — ข่าวเงินเฟ้อฝั่งผู้ผลิตเป็นตัวเร่ง USD และ Treasury yields; ตัวเลขสูงกว่าคาดมักกดดันทองผ่านดอลลาร์แข็งและ yield ขึ้น <a href="https://www.forexfactory.com/calendar" target="_blank" rel="noopener">calendar</a></li><li><strong>US Initial Jobless Claims</strong> — ข้อมูลแรงงานรายสัปดาห์มีผลต่อคาดการณ์ Fed; ตัวเลขแย่กว่าคาดอาจหนุนทองจาก USD อ่อนและ risk hedge <a href="https://www.forexfactory.com/calendar" target="_blank" rel="noopener">calendar</a></li><li><strong>Fed speak / USD policy tone</strong> — ถ้อยแถลงสาย hawkish หนุน USD/yield และเป็นแรงกด XAUUSD; dovish tone ช่วยเปิดทางรีบาวด์ <a href="https://www.metalsmine.com/calendar" target="_blank" rel="noopener">calendar</a></li></ul><p class="trade-bias"><strong>Bias:</strong> ถ้า USD/yield แข็งหลังข่าว ให้ระวังแรงขาย XAUUSD; ถ้าตัวเลขแย่กว่าคาดและ USD อ่อน ทองมีโอกาสรีบาวด์เร็ว</p></section></div>
                     <div style="margin-top: 12px; font-size: 12px; color: var(--color-text-muted);">Reported by น้องเฮ้อ (Nong Her)</div>
                 </div>
 
@@ -266,7 +266,7 @@
                         <div class="section-title">✨ Creative Studio</div>
                     </div>
                     <div class="nong-her-quote">
-                        "วันนี้ลองทำ “CEO Signal Map” 1 หน้า: แยกทุกไอเดียออกเป็น 3 ช่อง — <b>ทำเงิน</b>, <b>สร้างอำนาจต่อรอง</b>, และ <b>เพิ่มความเร็วทีม</b>. ถ้าไอเดียไหนแตะได้ครบ 2 ช่องขึ้นไป ให้ดันเข้าระบบทันที เพราะนั่นไม่ใช่แค่ความคิดสร้างสรรค์…แต่มันคืออาวุธเชิงกลยุทธ์ค่ะบอส"
+                        "<div class="creative-idea"><h3>Creative Idea of the Day จากน้องเฮอ</h3><p><strong>วันนี้ให้ BassSG ทำ Signal-to-Content Sprint 30 นาที:</strong> เลือก 1 จังหวะจาก XAUUSD หรือ BTCUSD ที่ชัดที่สุดในเช้านี้ แล้วแปลงเป็นโพสต์สั้น 3 เวอร์ชันทันที: <em>มุมเทรดเดอร์</em>, <em>มุมมือใหม่</em>, และ <em>มุม CEO ที่อ่านเกมตลาด</em>. ใช้กราฟเดียวกัน แต่เปลี่ยน headline ให้คนละอารมณ์ จากนั้นปล่อยตัวที่คมที่สุดก่อนเที่ยงเพื่อวัด engagement จริง ไม่ต้องเดาใจตลาดมาก น้องเฮอขอให้ใช้ตลาดเป็นคอนเทนต์ และใช้คอนเทนต์เป็นเรดาร์ธุรกิจค่ะ</p></div>"
                     </div>
                     <p style="font-size: 13px; color: var(--color-text-muted);">— น้องเฮอร์ (CEO)</p>
                 </div>
