@@ -1,37 +1,37 @@
 {
-  "missing_placeholders": [],
-  "date": "15 May 2026 08:53",
-  "global_count": 3,
-  "ai_count": 3,
-  "thai_count": 3,
-  "red_count": 0,
-  "assets": {
-    "XAUUSD": {
-      "price": 4609.105,
-      "changePercentage": -0.92783,
-      "rsi": 44.71221948359712,
-      "sma": 4661.661500000001
+  "date": "วันศุกร์ที่ 15 พฤษภาคม 2569",
+  "time": "19:11",
+  "market": [
+    {
+      "symbol": "XAUUSD",
+      "price": 4555.175,
+      "rsi": 40.1982739763132,
+      "sma": 4653.304300000001,
+      "change": -2.08705
     },
-    "BTCUSD": {
-      "price": 81096,
-      "changePercentage": 0.03263865,
-      "rsi": 60.45493904215983,
-      "sma": 74762.5596
+    {
+      "symbol": "BTCUSD",
+      "price": 80580.36,
+      "rsi": 57.669160089850806,
+      "sma": 74994.3662,
+      "change": -0.60341
     }
-  },
+  ],
   "global_titles": [
-    "Flattery and fanfare as Trump welcomed to China - but thorny issues remain",
-    "'Floating armoury' ship reportedly seized by Iran",
-    "Cuba says CIA chief visited Havana as energy crisis worsens"
+    "Trump and Xi conclude 'very successful' talks but no deals announced",
+    "CIA chief visits Cuba as energy crisis worsens",
+    "New outbreak of Ebola kills 65 in eastern DR Congo"
   ],
   "ai_titles": [
-    "What the jury will actually decide in the case of Elon Musk vs. Sam Altman",
-    "Elon Musk’s SpaceXAI has been bleeding staff since its merger",
-    "OpenAI says Codex is coming to your phone"
+    "How Chinese short dramas became AI content machines",
+    "Data readiness for agentic AI in financial services",
+    "Establishing AI and data sovereignty in the age of autonomous systems"
   ],
   "thai_titles": [
-    "อุทาหรณ์ ! สั่งยาย้อมผมสมุนไพรจากออนไลน์ แพ้หนักถึงขั้นหัวเน่า ทำน้ำเหลืองไหลเยิ้ม-หน้าบวมเป่ง",
-    "I almost threw up! I ate fish dumplings and found tissue paper stuffed inside.",
-    "เสียงลึกลับ? โทรขู่ \"อินฟลูชื่อดัง\" คุกคาม \"ลุงโยชน์\"! | คนดังนั่งเคลียร์ | 14 พ.ค. 69"
-  ]
+    "Live \"กรรมกรข่าว คุยนอกจอ\" 15 พฤษภาคม 2569",
+    "LIVE!! รายการ #คุยข่าวเช้าช่อง8 #เช้านี้ขยี้ข่าว วันที่ 15 พฤษภาคม 2569",
+    "ถ่ายทอดสด เรื่องเล่าเช้านี้ วันที่ 15 พฤษภาคม 2569"
+  ],
+  "rendered_bytes": 14098,
+  "unreplaced": []
 }
