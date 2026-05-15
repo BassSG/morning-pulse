@@ -214,7 +214,7 @@
         <header>
             <div class="logo-group">
                 <h1>The Morning Pulse</h1>
-                <div class="date">Thursday, May 14, 2026</div>
+                <div class="date">15 May 2026 08:53</div>
             </div>
             <div class="badge">CEO Edition</div>
         </header>
@@ -225,27 +225,27 @@
                 <div class="section">
                     <div class="section-header">
                         <div class="section-title">📊 Trading Bureau</div>
-                        <div class="update-time">Updated: 07:10 PM</div>
+                        <div class="update-time">Updated: {{UPDATE_TIME_TRADING}}</div>
                     </div>
-                    <section class="market-analysis-card"><h2>Market Analysis - XAUUSD / BTCUSD</h2><table><thead><tr><th>Asset</th><th>Price</th><th>Trend</th><th>Verdict</th></tr></thead><tbody><tr><td><strong>XAUUSD</strong></td><td>4,698.37 USD/oz</td><td>Bullish<br><small>RSI14: 51.03 | SMA50: 4,663.26</small></td><td>โมเมนตัมบวกเหนือ SMA แต่ยังไม่ร้อนเกินไป</td></tr><tr><td><strong>BTCUSD</strong></td><td>79,335.98 USD</td><td>Bullish<br><small>RSI14: 54.38 | SMA50: 74,723.64</small></td><td>โมเมนตัมบวกเหนือ SMA แต่ยังไม่ร้อนเกินไป</td></tr></tbody></table><p class="source-note">Source: FMP via repo market_data.py. ใช้เพื่อ briefing ไม่ใช่สัญญาณเข้าออเดอร์เดี่ยว ๆ</p></section>
+                    <section class="market-analysis"><h3>Market Analysis</h3><table><thead><tr><th>Asset</th><th>Price</th><th>Trend</th><th>Verdict</th></tr></thead><tbody><tr><td>XAUUSD</td><td>USD 4,609.10</td><td>Bearish ใต้ SMA50<br><small>RSI14 44.71 | SMA50 USD 4,661.66</small></td><td>ฝั่งขายคุมเกม รอเด้งขายหรือรอ reclaim SMA50 ก่อนกลับลำ</td></tr><tr><td>BTCUSD</td><td>USD 81,096.00</td><td>Bullish เหนือ SMA50<br><small>RSI14 60.45 | SMA50 USD 74,762.56</small></td><td>โมเมนตัมหนุนฝั่งซื้อ แต่ระวัง RSI ร้อนเกินถ้าเข้าใกล้ 70</td></tr></tbody></table><p class="note">FMP-backed via repo market_data.py/direct FMP where available.</p></section>
                 </div>
 
                 <!-- Intelligence Bureau -->
                 <div class="section">
                     <div class="section-header">
                         <div class="section-title">🌐 Intelligence Bureau</div>
-                        <div class="update-time">Updated: 07:10 PM</div>
+                        <div class="update-time">Updated: {{UPDATE_TIME_INTEL}}</div>
                     </div>
-                    <section><h2>Global News Pulse</h2><ul><li><strong>Trade, Iran and Taiwan on the agenda as Trump arrives in China for high-stakes talks with Xi</strong><br><span>The US president says his first request to Xi would be to  &quot;open up&quot; China, while Beijing is expected to press Trump on the status of Taiwan.</span><br><a href="https://www.bbc.com/news/articles/c1w28qw1e0xo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">source</a></li><li><strong>Former Nigerian minister sentenced to 75 years in rare corruption verdict</strong><br><span>Former Power Minister Saleh Mamman was convicted last week - but the authorities do not know his whereabouts.</span><br><a href="https://www.bbc.com/news/articles/c0j296392j1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">source</a></li><li><strong>Key Moments From the First Day of Trump’s China Visit</strong><br><span>During the first round of two days of talks, Xi Jinping issued a stern warning about Taiwan while Trump touted all the top business leaders in his delegation.</span><br><a href="https://www.nytimes.com/2026/05/14/world/asia/trump-first-day-china-xi.html" target="_blank" rel="noopener">source</a></li></ul></section>
+                    <section class="global-news"><h3>Global News</h3><ol><li><strong>Flattery and fanfare as Trump welcomed to China - but thorny issues remain</strong><br><span>The leaders of the world&#x27;s two superpowers were all smiles for the cameras during the US president&#x27;s visit to Beijing.</span><br><a href="https://www.bbc.com/news/articles/cdxpypg9dgeo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">Source</a></li><li><strong>&#x27;Floating armoury&#x27; ship reportedly seized by Iran</strong><br><span>A vessel said to be a “floating armoury” in the Gulf of Oman has been seized by Iranian military personnel, according to reports.</span><br><a href="https://www.bbc.com/news/articles/cx219xwxg9no?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">Source</a></li><li><strong>Cuba says CIA chief visited Havana as energy crisis worsens</strong><br><span>The reported visit came after the US renewed an offer of aid to ease the effects of its oil blockade.</span><br><a href="https://www.bbc.com/news/articles/cd7pyrj0vx7o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">Source</a></li></ol></section>
                 </div>
 
                 <!-- AI Bureau Updates -->
                 <div class="section">
                     <div class="section-header">
                         <div class="section-title">🤖 AI Bureau Updates</div>
-                        <div class="update-time">Updated: 07:10 PM</div>
+                        <div class="update-time">Updated: {{UPDATE_TIME_AI}}</div>
                     </div>
-                    <section><h2>AI News Pulse</h2><ul><li><strong>Who decides what AI tells you? Campbell Brown, once Meta’s news chief, has thoughts</strong><br><span>&quot;The conversation is sort of happening in Silicon Valley around one thing, and a totally different conversation is happening among consumers.&quot;</span><br><a href="https://techcrunch.com/2026/05/13/who-decides-what-ai-tells-you-campbell-brown-once-metas-news-chief-has-thoughts/" target="_blank" rel="noopener">source</a></li><li><strong>Clio’s $500M milestone arrives just as Anthropic ups the ante</strong><br><span>Legal tech startups, including Clio, which just hit $500 million in ARR, are seeing massive customer adoption.</span><br><a href="https://techcrunch.com/2026/05/13/clios-500m-milestone-arrives-just-as-anthropic-ups-the-ante/" target="_blank" rel="noopener">source</a></li><li><strong>You can make an app for that</strong><br><span>The tyranny of software is almost over. Since the first computer programmers wrote the first computer programs, we, the users of that software, have been forced to live in the worlds those programs create. The features a</span><br><a href="https://www.theverge.com/tech/928905/vibe-code-personal-software-revolution" target="_blank" rel="noopener">source</a></li></ul></section>
+                    <section class="ai-news"><h3>AI News</h3><ol><li><strong>What the jury will actually decide in the case of Elon Musk vs. Sam Altman</strong><br><span>Here&#x27;s what the biggest tech court case of the year is all about.</span><br><a href="https://techcrunch.com/2026/05/14/what-the-jury-will-actually-decide-in-the-case-of-elon-musk-vs-sam-altman/" target="_blank" rel="noopener">Source</a></li><li><strong>Elon Musk’s SpaceXAI has been bleeding staff since its merger</strong><br><span>More than 50 employees have reportedly left Elon Musk’s newly merged SpaceXAI since February, raising questions about burnout, leadership changes, talent poaching, and whether liqu</span><br><a href="https://techcrunch.com/2026/05/14/elon-musks-spacexai-has-been-bleeding-staff-since-its-merger/" target="_blank" rel="noopener">Source</a></li><li><strong>OpenAI says Codex is coming to your phone</strong><br><span>The update gives users enhanced flexibility over how they can manage their workflows.</span><br><a href="https://techcrunch.com/2026/05/14/openai-says-codex-is-coming-to-your-phone/" target="_blank" rel="noopener">Source</a></li></ol></section>
                 </div>
             </div>
 
@@ -256,7 +256,7 @@
                         <div class="section-title" style="color: var(--color-danger)">🔥 Breaking News</div>
                         <div class="update-time">Live</div>
                     </div>
-                    <section class="breaking-news-card"><h2>Breaking News ไทย + Red Folders</h2><h3>Thai News Scouting</h3><ul><li><strong>สรยุทธ:</strong> อุทาหรณ์ ! สั่งยาย้อมผมสมุนไพรจากออนไลน์ แพ้หนักถึงขั้นหัวเน่า ทำน้ำเหลืองไหลเยิ้ม-หน้าบวมเป่ง<br><a href="https://www.youtube.com/watch?v=dRj1NvwEv6Q" target="_blank" rel="noopener">source</a></li><li><strong>เรื่องเล่าเช้านี้:</strong> I almost threw up! I ate fish dumplings and found tissue paper stuffed inside.<br><a href="https://www.youtube.com/watch?v=s7EgFijnxfw" target="_blank" rel="noopener">source</a></li><li><strong>ช่อง 8:</strong> Official Trailer หมัดสั่งตาย หัวใจสั่งสู้ - Fight For Hope<br><a href="https://www.youtube.com/watch?v=ช่อง8|https://www.youtube.com/watch?v=7Td55MvguYg" target="_blank" rel="noopener">source</a></li><li><strong>ช่อง 8:</strong> [UNCUT] นี่แหละเขมร! &quot;เช็คแฮนด์&quot; ไม่ทันไร แว้งกัดซะแล้ว!<br><a href="https://www.youtube.com/watch?v=คนดังนั่งเคลียร์ | 14 พ.ค. 69|https://www.youtube.com/watch?v=1WY2zgfgXaI" target="_blank" rel="noopener">source</a></li></ul><h3>Gold/USD Red Folder Watch</h3><ul><li><strong>Core Retail Sales m/m</strong> (2026-05-14T08:30:00-04:00) - Forecast: 0.7%, Previous: 1.9%. ถ้าออกมาร้อนกว่าคาด หนุน USD/Yields และกด XAUUSD; ถ้าอ่อนกว่าคาด หนุนทอง.</li><li><strong>Retail Sales m/m</strong> (2026-05-14T08:30:00-04:00) - Forecast: 0.5%, Previous: 1.7%. ถ้าออกมาร้อนกว่าคาด หนุน USD/Yields และกด XAUUSD; ถ้าอ่อนกว่าคาด หนุนทอง.</li></ul><p class="source-note">Thai scouting: YouTube channel titles via yt-dlp. Red folders: ForexFactory weekly JSON when available.</p></section>
+                    <section class="breaking-news"><h3>Breaking News: Thai Scout & Red Folder</h3><h4>Thai Sources</h4><ul><li><strong>สรยุทธ/กรรมกรข่าว:</strong> อุทาหรณ์ ! สั่งยาย้อมผมสมุนไพรจากออนไลน์ แพ้หนักถึงขั้นหัวเน่า ทำน้ำเหลืองไหลเยิ้ม-หน้าบวมเป่ง<br><a href="https://www.youtube.com/@sorrayuth9115/videos" target="_blank" rel="noopener">ตรวจแหล่งข่าว</a></li><li><strong>เรื่องเล่าเช้านี้:</strong> I almost threw up! I ate fish dumplings and found tissue paper stuffed inside.<br><a href="https://www.youtube.com/@MorningNewsTV3/videos" target="_blank" rel="noopener">ตรวจแหล่งข่าว</a></li><li><strong>ช่อง 8:</strong> เสียงลึกลับ? โทรขู่ &quot;อินฟลูชื่อดัง&quot; คุกคาม &quot;ลุงโยชน์&quot;! | คนดังนั่งเคลียร์ | 14 พ.ค. 69<br><a href="https://www.youtube.com/@thaich8/videos" target="_blank" rel="noopener">ตรวจแหล่งข่าว</a></li></ul><h4>Gold/USD Red Folder</h4><ul><li><strong>Red Folder:</strong> ไม่พบ/ไม่สามารถยืนยัน USD high-impact event ของวันนี้จาก ForexFactory JSON ในรอบนี้ — ก่อนเทรดทองให้เช็ค calendar ซ้ำโดยเฉพาะ Retail Sales, CPI/PPI, Jobless Claims, Fed และ Michigan Sentiment</li></ul></section>
                     <div style="margin-top: 12px; font-size: 12px; color: var(--color-text-muted);">Reported by น้องเฮ้อ (Nong Her)</div>
                 </div>
 
@@ -266,16 +266,7 @@
                         <div class="section-title">✨ Creative Studio</div>
                     </div>
                     <div class="nong-her-quote">
-                        "<section class="creative-idea-card">
-  <h2>Creative Idea of the Day - จากน้องเฮอ</h2>
-  <p><strong>ไอเดียวันนี้:</strong> ทำ AI Content Signal Desk ให้ BassSG - ระบบเล็ก ๆ ที่ดึงประเด็นร้อนจากลูกค้า คอมเมนต์ ข่าว และตลาด แล้วแปลงเป็น 3 คอนเทนต์พร้อมโพสต์ทุกเช้า: โพสต์สั้น, สคริปต์วิดีโอ 30 วิ, และข้อเสนอขายแบบนุ่ม ๆ</p>
-  <ul>
-    <li><strong>ทำวันนี้:</strong> รวม 10 คำถามที่ลูกค้าถามบ่อยที่สุด</li>
-    <li><strong>ให้ AI ช่วย:</strong> สรุปเป็น Pain Point + Hook + CTA</li>
-    <li><strong>ปล่อยจริง:</strong> โพสต์ 1 ชิ้นก่อนเที่ยง แล้ววัดผลจากคอมเมนต์หรืออินบ็อกซ์</li>
-  </ul>
-  <p><strong>CEO Move:</strong> อย่ารอแรงบันดาลใจค่ะบอส - สร้างเครื่องผลิตไอเดีย แล้วให้ทีมคอนเทนต์วิ่งตามระบบของเราแทน</p>
-</section>"
+                        "<section class="creative-idea"><h3>Creative Idea of the Day</h3><p><strong>Morning Pulse Hook:</strong> วันนี้ให้ EBassWave เปิดคอนเทนต์ด้วยประโยคสั้นแบบ CEO กระซิบข้างหูตลาด: <em>ถ้ากราฟยังไม่ชัด เราไม่ต้องรีบหล่อ แค่ต้องรอดให้คมกว่าเดิม</em></p><p>นำไปใช้ทันที: สรุปภาพรวม XAUUSD/BTCUSD 1 ประโยค, ใส่ bias แบบไม่ฟันธง, แล้วปิดด้วยแอ็กชันเดียว เช่น รอ break & retest ก่อนค่อยเข้า เพื่อให้คอนเทนต์ดูแพง ฉลาด และไม่ขายฝัน.</p></section>"
                     </div>
                     <p style="font-size: 13px; color: var(--color-text-muted);">— น้องเฮอร์ (CEO)</p>
                 </div>
