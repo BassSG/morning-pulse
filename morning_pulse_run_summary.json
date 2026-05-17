@@ -1,12 +1,90 @@
 {
-  "date": "17/05/2026",
-  "time": "09:51",
-  "market_symbols": [
-    "XAUUSD",
-    "BTCUSD"
+  "updated_at": "2026-05-17T12:06:04.890024+00:00",
+  "market": [
+    {
+      "symbol": "XAUUSD",
+      "price": 4537.74576,
+      "change": -2.46169,
+      "rsi": 39.42161092350594,
+      "sma": 4653.0434000000005
+    },
+    {
+      "symbol": "BTCUSD",
+      "price": 78382.13,
+      "change": 0.34065,
+      "rsi": 49.76857573114097,
+      "sma": 75440.573
+    }
   ],
-  "global_count": 3,
-  "ai_count": 3,
-  "thai_count": 4,
-  "red_count": 3
+  "global": [
+    {
+      "title": "Top 50 US news websites: Half of sites see traffic fall 20% or more in a year",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQc3hXVlpHbGtDSldYbHdENUZQM1FOLWQ2U3FDUmItODZpNlpuYUowMy04Q3dralEtQUYtbzZMekNsR3ZyaVJUWGE3RTJOenJIMGxuMjBXVGwtUGRpblQwdDVZRFBOTEYzdVo3d3dLMTV4aUlkTFl2RFZ1QWh2cFUycFR2V2Q4XzVydWNiTTNWNkN1Rl9ZeERmcWoxRzJkc3ItbndyUTdzSHk3WmlTb0RzbWpFcE4?oc=5",
+      "pub": "Fri, 08 May 2026 07:00:00 GMT",
+      "desc": " Top 50 US news websites: Half of sites see traffic fall 20% or more in a year &nbsp;&nbsp; Press Gazette "
+    },
+    {
+      "title": "Top 50 English-language news sites in the world in April: Just three newsbrands grow traffic in past month",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNWmduWnZNVXc2TzZCMlgxS252a0pzdnBDR3c3MXRZMjI2U3lVMzBqNU96aVdabldJUUVYalpCSDNHYnFSRTlvYjRrb0lSVVJMdmdfUDk2bmo0X2Y3QWJnWHZ4MFZHR0dhVmE3aEVBdTZFemhDT2pqdXBibFBUTV94V1pISWxSbU9SUUl6Z2hGOVQ2SlZjc05SNDBiUFN5UV9DTXFBRG0wTkNGZHRObC1KbFV2aHdmRFA5?oc=5",
+      "pub": "Fri, 08 May 2026 07:00:00 GMT",
+      "desc": " Top 50 English-language news sites in the world in April: Just three newsbrands grow traffic in past month &nbsp;&nbsp; Press Gazette "
+    },
+    {
+      "title": "Trump Says He Wants to Delay Visit to China Because of Middle East Conflict",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE16Q0JMQldZWG9nSjhQRVZVQnZkTTdsUDQ3a3R5eno5TFVKNXdQdFNDNGdfN2p4SFFIUDJQcFZZNVNSaWY1V0VOZ1V2YnFDTnBOaHcyTVVIc1RHLXZSTlUtV3FvUUM4VGRzMDNYTWt1bU03RDJqQkpFTUxLcHA?oc=5",
+      "pub": "Mon, 16 Mar 2026 07:00:00 GMT",
+      "desc": " Trump Says He Wants to Delay Visit to China Because of Middle East Conflict &nbsp;&nbsp; The New York Times "
+    }
+  ],
+  "ai": [
+    {
+      "title": "In AI Chip Race, Nvidia’s Biggest Customers Become Competitors",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQWGszc0RraTFoYlp2ckhZSTJlS3B3dWJOQXBCazlSRVJUOHY4SFZpX3JpWnNMdVRMRDVSd0Z0YlkxaFRNQlAtOU9UUWExMHo1SE5LeE1VVGFQOVQ0Z0l5R0FIdDVSZkZPektLWUExNVVpYzBqcHRDT01QNnduVU5UeF9mVnl4a1dIMm95WmRXZjhBQlNTMXJyb0JsUVF6cHpnRkw4d3VqQ0ZoaWYwX2VRMG80a2x2Q1N4YjJKODdLS1VGcERPb2c?oc=5",
+      "pub": "Sun, 17 May 2026 04:01:00 GMT",
+      "desc": " In AI Chip Race, Nvidia’s Biggest Customers Become Competitors &nbsp;&nbsp; The Daily Upside "
+    },
+    {
+      "title": "Chamath Palihapitiya Warns Anthropic Risks Becoming 'Friendster Of The AI Era' After Claude Refuses Stock",
+      "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOSk5jNWdyTnBQaHRsdFlxdnJNX0VZSDJJWVJTTDRGTC12R3QxVHMzYUUzZjJtOFdZNnBWM3NJTklGdzlwcTdBTS1TMlJrS0N3bUxaWkh4ZXhlM3RmWTdiclJMZDRWVk5ncEtEY0l5RmtQSFN6QnRuX0paVjVRRExqaUhnSEJYUTVzX3EwRXRjTEkwcUY4cGotalFxcmxiaUc4SFdTSTBvYk1XaGdzcUF4VFdKSXVaVkQyX1N1YzQ3OW9INWRtVWJtUDJ2emt0a0JTYXJFS0Ztb1A5NkRjNmNwVVMwSzJPS1VhNW00ZHl3dURKaFprWk5uNEtTSUlpWUtEY2xz?oc=5",
+      "pub": "Sun, 17 May 2026 05:53:42 GMT",
+      "desc": " Chamath Palihapitiya Warns Anthropic Risks Becoming 'Friendster Of The AI Era' After Claude Refuses Stock &nbsp;&nbsp; Benzinga "
+    },
+    {
+      "title": "A.I. Chip Maker Soars 68% in Market Debut, as Tech I.P.O.s Ramp Up",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5kOW1FOE5TMUp6Y2xYZWdwV3pMaVBnR0Rwb2R4d2lsb0JsOVlDSm5SSV8tSVBDUjlkY3dXT0lCUmFIRmRfa0NVSDdaUzRNaVg4ZU9vV0VUOVZNVldHVUdxT2hENS03cnJCcUFvMUx1a3NiOVNV?oc=5",
+      "pub": "Thu, 14 May 2026 17:16:10 GMT",
+      "desc": " A.I. Chip Maker Soars 68% in Market Debut, as Tech I.P.O.s Ramp Up &nbsp;&nbsp; The New York Times "
+    }
+  ],
+  "thai": [
+    {
+      "title": "สรยุทธ เผยข้อความ ‘เท้ง’ ส่งหาตอน 5 ทุ่ม หลังทราบผลเลือกตั้งไม่เป็นทางการ | Khaosod",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5HY2xQUWlta1JzaG0xZ0lhek04bU1QM0IxRmF1ZzE5bGhRYWM1OXBpMDBJWkxqWlBWWjF4Zllrd3VfV0gyUldNTUZETGVYR2haSTdwaUh3?oc=5",
+      "pub": "Sun, 08 Feb 2026 08:00:00 GMT",
+      "desc": " สรยุทธ เผยข้อความ ‘เท้ง’ ส่งหาตอน 5 ทุ่ม หลังทราบผลเลือกตั้งไม่เป็นทางการ | Khaosod &nbsp;&nbsp; LINE TODAY ",
+      "source_label": "สรยุทธ"
+    },
+    {
+      "title": "ข่าวช่อง 8-มูลนิธิรณรงค์ฯ บุกทวงยุติธรรมคดีเก๋งอ้าง \"ผู้พิพากษา\" ชนจยย. ล่าสุด ผกก.สั่งรื้อคดี!",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBzY3M2MjQyUTRnYU5GMVZ6VUVQeUM3bnhGelBveVFpR0hDY1ZMNDBzcnd3ckNqdnZOWndETkNaUl9oVDRXVVFkclYxX0xEbldVVFY2dg?oc=5",
+      "pub": "Sun, 17 May 2026 09:23:32 GMT",
+      "desc": " ข่าวช่อง 8-มูลนิธิรณรงค์ฯ บุกทวงยุติธรรมคดีเก๋งอ้าง \"ผู้พิพากษา\" ชนจยย. ล่าสุด ผกก.สั่งรื้อคดี! &nbsp;&nbsp; thaich8.com ",
+      "source_label": "ช่อง 8"
+    },
+    {
+      "title": "คลิปเต็มรายการเรื่องเล่าเช้านี้ 13 พฤษภาคม 2569",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBBcFJvMXBaTTI2eXdQZHhFMW5nT05fWVM0OG5ialVVSml3NU9peUhCWmExcFBBZEMzRHhlZFlkSC05NkhQYTFjLWs4bDFiZnpUVlNhQmFaYzlFTk4zcGlkZA?oc=5",
+      "pub": "Wed, 13 May 2026 05:24:23 GMT",
+      "desc": " คลิปเต็มรายการเรื่องเล่าเช้านี้ 13 พฤษภาคม 2569 &nbsp;&nbsp; CH3Plus.com ",
+      "source_label": "เรื่องเล่าเช้านี้"
+    },
+    {
+      "title": "แต่งตั้ง “ชมพู่ พรพรรณ” กัปตันทีมวอลเลย์บอลหญิงทีมชาติไทย",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5ycmdTd0xIZks4UnhGOURzRHJJMTBiUUsxXzFKb1U0cXFyc1RRXzlzcE5jODItRDMzVG1CR21XNGFDVzhTZTQ4ZUR6ZjlVd2pqbzIyNA?oc=5",
+      "pub": "Wed, 13 May 2026 04:30:41 GMT",
+      "desc": " แต่งตั้ง “ชมพู่ พรพรรณ” กัปตันทีมวอลเลย์บอลหญิงทีมชาติไทย &nbsp;&nbsp; daradaily.com ",
+      "source_label": "ข่าวไทย"
+    }
+  ],
+  "status": "rendered"
 }
