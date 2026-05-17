@@ -1,37 +1,12 @@
 {
-  "date": "วันศุกร์ที่ 15 พฤษภาคม 2569",
-  "time": "19:11",
-  "market": [
-    {
-      "symbol": "XAUUSD",
-      "price": 4555.175,
-      "rsi": 40.1982739763132,
-      "sma": 4653.304300000001,
-      "change": -2.08705
-    },
-    {
-      "symbol": "BTCUSD",
-      "price": 80580.36,
-      "rsi": 57.669160089850806,
-      "sma": 74994.3662,
-      "change": -0.60341
-    }
+  "date": "17/05/2026",
+  "time": "09:51",
+  "market_symbols": [
+    "XAUUSD",
+    "BTCUSD"
   ],
-  "global_titles": [
-    "Trump and Xi conclude 'very successful' talks but no deals announced",
-    "CIA chief visits Cuba as energy crisis worsens",
-    "New outbreak of Ebola kills 65 in eastern DR Congo"
-  ],
-  "ai_titles": [
-    "How Chinese short dramas became AI content machines",
-    "Data readiness for agentic AI in financial services",
-    "Establishing AI and data sovereignty in the age of autonomous systems"
-  ],
-  "thai_titles": [
-    "Live \"กรรมกรข่าว คุยนอกจอ\" 15 พฤษภาคม 2569",
-    "LIVE!! รายการ #คุยข่าวเช้าช่อง8 #เช้านี้ขยี้ข่าว วันที่ 15 พฤษภาคม 2569",
-    "ถ่ายทอดสด เรื่องเล่าเช้านี้ วันที่ 15 พฤษภาคม 2569"
-  ],
-  "rendered_bytes": 14098,
-  "unreplaced": []
+  "global_count": 3,
+  "ai_count": 3,
+  "thai_count": 4,
+  "red_count": 3
 }
